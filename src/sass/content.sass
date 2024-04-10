@@ -1,0 +1,807 @@
+input::-webkit-input-placeholder 
+   color: rgb(160, 160, 160) !important
+input::-moz-placeholder
+   color: rgb(160, 160, 160) !important
+input:-ms-input-placeholder 
+   color: rgb(160, 160, 160) !important
+input:-moz-placeholder 
+   color: rgb(160, 160, 160) !important
+.menu-btn, .menu
+   display: none
+.custom-checkbox 
+   position: absolute
+   z-index: -1
+   opacity: 0
+.custom-checkbox+label 
+   display: flex
+   align-items: center
+   user-select: none
+   font-weight: 400
+   font-size: 16px
+   line-height: 130%
+   color: #494949
+   cursor: pointer
+   &:hover
+      &:before 
+         border: 1px solid $green
+.custom-checkbox+label::before
+   content: ''
+   display: inline-block
+   flex-shrink: 0
+   display: flex
+   flex-grow: 0
+   background-repeat: no-repeat
+   background-position: center center
+   background-size: 8px
+   background: #FFFFFF
+   flex: 1 0 auto
+   transition: 0.2s
+   width: 20px
+   height: 20px
+   border-radius: 5px
+   border: 1px solid #e9e9e9
+   background-color: #ffffff
+   max-width: 20px
+   margin-right: 11px
+.custom-checkbox:checked+label::before 
+   background: url(/img/check2.png) no-repeat center center
+   background-size: 8px
+.swiper-pagination
+   display: flex
+   justify-content: center
+   bottom: 19px
+   position: absolute
+   z-index: 2
+.swiper-pagination-bullet
+   width: 52px
+   height: 2px
+   background-color: #ffffff
+   opacity: 0.2
+.swiper-pagination-bullet-active
+   background-color: $green !important
+   opacity: 1
+.swiper-button-next, .swiper-button-prev
+   z-index: 9
+.swiper-button-disabled
+   opacity: 0
+   pointer-events: none
+.navigation
+   padding: 18.5px 0 
+   border-bottom: 1px solid rgb(237, 237, 237)
+   margin-bottom: 80px
+.tabs__pane 
+   display: none
+.tabs__pane_show 
+   display: block
+.tabs__btn_active
+   color: #20252d !important
+   position: relative
+.page 
+   .header
+      padding-bottom: 0 !important
+.bread 
+   display: flex
+   align-items: center
+   justify-content: flex-start
+   flex-wrap: wrap
+   a 
+      color: #5d5d5d
+      font-size: 14px
+      line-height: 26px
+      &:after 
+         content: ""
+         display: inline-block
+         margin: 0 20px
+         background: url(/img/brea.svg) no-repeat center center
+         width: 17px
+         height: 14px
+         position: relative
+         top: 3px
+      &:last-child
+         color: rgb(180, 180, 180)
+         &:after 
+            display: none
+      &:hover 
+         color: $green
+.mob 
+   display: none
+.nav 
+   border-bottom: 1px solid rgb(237, 237, 237)
+   &__box 
+      align-items: center
+      justify-content: space-between
+      padding: 36px 0 
+   &__logo 
+      a 
+         display: block
+         img 
+            width: 100%
+            height: 100%
+            object-fit: contain
+   &__content 
+      padding-left: 18px
+      margin-left: 20px
+      border-left: 1px solid rgb(209, 209, 209)
+      span 
+         color: rgb(180, 180, 180)
+         font-size: 18px
+         font-weight: 400
+         line-height: 24px
+      p 
+         margin-top: 4px
+         color: rgb(180, 180, 180)
+         font-size: 12px
+         font-weight: 400
+         line-height: 14px
+   &__info 
+      align-items: center
+      position: relative
+      left: -92px
+      ul 
+         display: flex
+         flex-wrap: wrap 
+         li 
+            margin-right: 66px
+            &:last-child
+               margin-right: 0
+            a 
+               color: rgb(51, 51, 51)
+               font-size: 18px
+               font-weight: 400
+               line-height: 21px
+            &:hover 
+               a 
+                  color: $green
+   &__catalog 
+      align-items: center
+      justify-content: center
+      margin-right: 59px
+      width: 200px
+      height: 55px
+      border-radius: 100px
+      background: $green
+      color: rgb(255, 255, 255) !important
+      font-size: 17px
+      font-weight: 500
+      position: relative
+      cursor: pointer
+      &:after 
+         width: 100%
+         height: 30px
+         content: ""
+         display: block
+         position: absolute
+         bottom: -30px
+         left: 0
+      &:hover 
+         ul 
+            display: block
+      img 
+         margin-right: 16px
+      ul 
+         position: absolute
+         bottom: -460px
+         left: 0
+         width: 797px
+         height: auto
+         border-radius: 10px
+         box-shadow: 0px 16px 45.7px 0px rgba(0, 0, 0, 0.15)
+         background: rgb(255, 255, 255)
+         padding: 20px 0 
+         display: none
+         li 
+            width: 100%
+            margin-right: 0 !important
+            margin-bottom: 5px
+            a 
+               width: 100%
+               padding: 0 34px 
+               height: 46px
+               display: flex
+               align-items: center
+               justify-content: space-between
+               color: rgb(51, 51, 51) !important
+               font-size: 18px
+               font-weight: 400
+               line-height: 21px
+               img 
+                  margin-right: 0
+            &:hover 
+                  background: rgb(245, 245, 245)
+            &:last-child
+               margin-bottom: 0
+   &__tel 
+      text-align: right
+      p 
+         font-size: 12px
+      a 
+         color: rgb(51, 51, 51)
+         font-size: 20px
+         font-weight: 500
+         &:hover 
+            color: $green
+.header
+   padding-bottom: 20px
+   &__wrap 
+      margin-top: 130px
+   &__top 
+      align-items: flex-end
+      justify-content: space-between
+   &__info 
+      align-items: center
+      margin-bottom: 15px
+      p 
+         font-size: 17px
+         font-weight: 300
+         line-height: 27px
+         margin-right: 57px
+         max-width: 460px
+   &__main 
+      width: 100%
+      height: 800px
+      object-fit: cover
+      margin-top: 60px
+.main 
+   padding-bottom: 50px
+   .header__top
+      padding: 45px 44px 48px
+      border: 1px solid rgb(225, 225, 225)
+      margin-bottom: 23px
+      p 
+         margin-right: 250px
+   &__box 
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__item 
+      position: relative
+      width: 32.36%
+      background: rgb(243, 243, 243)
+      padding: 50px 47px 49.5px
+      overflow: hidden
+      margin-bottom: 23px
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      height: 372px
+      & > img 
+         position: absolute
+         mix-blend-mode: darken
+         right: -68px
+         top: 13px
+      p 
+         margin-top: auto
+         color: rgb(51, 51, 51)
+         font-size: 26px
+         font-weight: 400
+         line-height: 36px
+         order: 2
+      &:hover 
+         .main__block 
+            background: $green
+            border: 1px solid $green
+            .svg 
+               path 
+                  fill: white
+      &:nth-child(2)
+         & > img 
+            right: -47px
+            top: 46px
+      &:nth-child(3)
+         & > img 
+            right: -52px
+            top: 29px
+      &:nth-child(4)
+         & > img 
+            right: -52px
+            top: 69px
+      &:nth-child(5)
+         & > img 
+            right: -163px
+            top: 51px
+      &:nth-child(6)
+         & > img 
+            right: -8px
+            top: 40px
+      &:nth-child(7)
+         width: 49.25%
+         & > img 
+            right: -149px
+            top: 23px
+      &:nth-child(8)
+         width: 49.25%
+         & > img 
+            right: 60px
+            top: 44px
+   &__block 
+      order: 1
+      width: 55px
+      align-items: center
+      justify-content: center
+      height: 55px
+      box-sizing: border-box
+      border: 1px solid rgb(226, 226, 226)
+      border-radius: 100px
+      background: rgb(243, 243, 243)
+      transition: 0.5s
+   &__bottom 
+      align-items: center
+      justify-content: space-between
+      margin-top: 35px
+      background: rgb(243, 243, 243)
+      padding: 60px 88px
+   &__area 
+      align-items: flex-start
+   &__content 
+      margin-left: 20px
+      h3 
+         margin-top: 0
+         margin-bottom: 11px
+         color: rgb(51, 51, 51)
+         font-size: 22px
+         font-weight: 500
+         line-height: 26px
+      p 
+         color: rgb(114, 114, 114)
+         font-size: 18px
+         font-weight: 400
+         line-height: 28px
+.call 
+   padding: 50px 0 60px
+   &__row
+      justify-content: space-between
+   &__left 
+      width: 100%
+      max-width: 995px
+      margin-right: 100px
+   &__right 
+      border-radius: 10px
+      background: rgb(243, 243, 243)
+      padding: 45px 50px 50px
+      width: 100%
+      max-width: 707px
+      h3 
+         margin-top: 0
+         margin-bottom: 22px
+         font-size: 30px
+         font-weight: 400
+         line-height: 36px
+      p 
+         font-size: 17px
+         font-weight: 300
+         line-height: 27px
+         margin-bottom: 5px
+      a 
+         margin-left: auto
+   h2 
+      margin-bottom: 23px
+   &__text 
+      font-size: 17px
+      font-weight: 300
+      line-height: 27px
+      margin-bottom: 86px
+   &__form 
+      display: flex
+      justify-content: space-between
+      width: 100%
+      max-width: 996px
+      margin-bottom: 45px
+      input 
+         width: 34.74%
+         padding-bottom: 21px
+         font-size: 20px
+         font-weight: 400
+         line-height: 27px
+      button 
+         width: 223px
+         height: 55px
+   &__sub 
+      font-size: 14px
+      line-height: 25px
+      a 
+         color: rgb(51, 51, 51)
+         text-decoration: underline
+         &:hover 
+            color: $green
+.clients
+   padding: 63px 0
+   &__top 
+      align-items: center
+      justify-content: space-between
+   .swiper1 
+      overflow: hidden
+      margin-top: 69px
+      .swiper-slide
+         display: flex
+         padding: 40px
+         align-items: center
+         justify-content: center
+         border: 1px solid rgb(240, 240, 240)
+         height: 200px
+         img 
+            width: 100%
+            object-fit: contain
+            height: 100%   
+.arrows 
+   align-items: center
+   div
+      width: 59.63px
+      height: 59.63px
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: 0.5s 
+      cursor: pointer
+      box-sizing: border-box
+      border: 1px solid rgb(226, 226, 226)
+      border-radius: 50%
+      .svg 
+         path 
+            fill: rgb(51, 51, 51)
+      &:first-child
+         margin-right: 16px
+      &:hover 
+         border: 1px solid $green
+         .svg 
+            path 
+               fill: $green
+.info 
+   padding: 124px 0 70px
+   &__box 
+      justify-content: center
+      padding: 0px 48px 0px 0px
+      position: relative
+      &:after 
+         content: ""
+         display: block
+         width: 100%
+         height: 100%
+         position: absolute
+         left: 0
+         top: 0
+         background: rgba(30, 51, 56, 0.6)
+         z-index: 0
+   &__item 
+      padding: 265px 80px 101px 77px
+      position: relative
+      z-index: 2
+      display: flex
+      flex-direction: column
+      align-items: flex-start 
+      border-right: 1px solid rgba(255, 255, 255, 0.29)
+      h3 
+         margin-top: 0
+         color: rgb(255, 255, 255)
+         font-size: 40px
+         font-weight: 500
+         line-height: 50px
+         min-height: 100px
+         margin-bottom: 28px
+         &:after 
+            content: ""
+            display: block
+            background: $green
+            width: 14px
+            height: 14px
+            margin-bottom: 3px
+            margin-top: 18.5px
+      p 
+         color: rgb(255, 255, 255)
+         font-size: 17px
+         font-weight: 400
+         line-height: 27px
+         width: 100%
+         max-width: 442px
+      &_1 
+         h3:after 
+            margin-top: 68.5px
+      &_2
+         padding-left: 77px
+         padding-right: 112px
+      &_3 
+         padding-right: 73px
+         border-right: none
+         padding-left: 77px
+         &:after 
+            display: none
+         p 
+            max-width: 388px
+
+   &__bg 
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      object-fit: cover 
+      z-index: -1
+.order
+   padding: 10px 0 92px
+   &__top 
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 52px
+   &__link 
+      width: 201.63px
+      height: 55px
+   &__wrap 
+      position: relative
+      width: 100%
+      padding: 80px 0 0 80px
+      height: 773px
+   #map 
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+      height: 100%
+   [class*="ymaps-"][class*="-ground-pane"] 
+      filter: grayscale(100)
+   &__block
+      position: relative
+      z-index: 2
+      box-shadow: 0px 34px 76.2px 0px rgba(0, 0, 0, 0.15)
+      background: rgb(255, 255, 255)
+      width: 432px
+      padding: 42px 30px 30px 35px
+   &__tel 
+      color: rgb(51, 51, 51)
+      font-size: 40px
+      font-weight: 400
+      margin-bottom: 33px
+      display: block
+      &:hover 
+         color: $green
+   &__btn 
+      width: 219.79px
+      height: 52.1px
+      margin-right: 22px
+   &__info 
+      align-items: center
+   &__socials 
+      width: 117.66px
+      height: 52.1px
+      border: 1px solid $green
+      align-items: center
+      justify-content: space-between
+      border-radius: 100px
+      padding: 7px 25px 0
+      background: rgb(255, 255, 255)
+      a 
+         &:first-child
+            position: relative
+            &:after 
+               content: ""
+               display: block
+               position: absolute
+               right: -13px
+               top: 0
+               width: 1px
+               height: 22px
+               background: rgb(209, 209, 209)
+         &:hover 
+            path 
+               fill: $green
+.footer 
+   padding-bottom: 60px
+   &__lists 
+      position: relative
+      left: -16px
+   &__box 
+      justify-content: space-between
+      border-top: 1px solid rgb(216, 227, 239)
+      border-bottom: 1px solid rgb(216, 227, 239)
+      padding: 66px 0 71px
+   .nav__logo
+      margin-bottom: 61px
+   &__name 
+      color: rgb(154, 154, 154)
+      font-size: 14px
+      font-weight: 500
+      line-height: 17px
+      margin-bottom: 38px
+   &__content 
+      .footer__name 
+         margin-bottom: 20px
+   &__socials
+      div 
+         width: 33.85px
+         height: 33.85px
+         background: rgb(243, 243, 243)
+         display: flex
+         align-items: center
+         justify-content: center
+         border-radius: 50%
+         transition: 0.5s
+         .svg 
+            width: 52%
+   &__el
+      &:hover 
+         div
+            background: $green
+            .svg 
+               path 
+                  fill: white
+   &__el 
+      align-items: center 
+      p 
+         margin-left: 10px
+         color: rgb(51, 51, 51)
+         font-size: 14px
+         font-weight: 400
+         line-height: 17px
+      &:first-child
+         margin-right: 32px
+   &__item 
+      margin-right: 130px
+      &:last-child
+         margin-right: 0
+      li 
+         margin-bottom: 14px
+         &:last-child
+            margin-bottom: 0
+         a 
+            color: rgb(51, 51, 51)
+            font-size: 14px
+            font-weight: 400
+            &:hover 
+               color: $green
+   &__block 
+      border-radius: 10px
+      background: rgb(243, 243, 243)
+      padding: 12px 33px 14px 29px
+      a 
+        display: block
+      p 
+         color: rgb(51, 51, 51)
+         font-size: 14px
+         font-weight: 400
+         margin-top: 16px
+   &__tel, &__mail 
+      color: rgb(51, 51, 51)
+      font-size: 14px
+      font-weight: 400
+      line-height: 36px
+      &:hover 
+         color: $green
+   &__area 
+      &:first-child
+         margin-right: 38px
+   &__link 
+      font-size: 14px
+      font-weight: 500
+      line-height: 17px
+      color: $green
+      &:hover 
+         color: #000
+   &__bottom 
+      align-items: center
+      justify-content: space-between
+      padding-top: 30px
+   &__sub 
+      color: rgb(154, 154, 154)
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+   &__com 
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+      a 
+         color: $green
+         &:hover 
+            color: #000
+.policy
+   padding-bottom: 90px
+   .tabs__nav
+      margin-right: 100px
+   .tabs 
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 80px
+   .tabs__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 5px
+      height: 43px
+      padding: 0 21px 
+      width: max-content
+      font-weight: 500
+      font-size: 16px
+      margin-bottom: 5px
+      color: rgb(51, 51, 51)
+      &_active 
+         background: $green
+         color: white !important
+      &:hover 
+         color: $green
+   &__box 
+      padding: 56px 70px 
+      border-radius: 5px
+      background: rgb(249, 249, 249)
+      h3 
+         color: rgb(51, 51, 51)
+         font-size: 24px
+         font-weight: 500
+         line-height: 24px
+         margin-top: 0
+         margin-bottom: 25px
+      p 
+         color: rgb(51, 51, 51)
+         font-size: 14px
+         font-weight: 400
+         line-height: 24px
+         margin-bottom: 25px
+      ul 
+         padding-left: 50px
+         li 
+            color: rgb(51, 51, 51)
+            font-size: 14px
+            font-weight: 400
+            line-height: 24px
+   &__item 
+      margin-bottom: 40px
+      &:last-child
+         margin-bottom: 0
+.error 
+   &__box
+      width: 100%
+      max-width: 640px 
+      margin: 0 auto
+      text-align: center
+      h1 
+         margin: 20px auto 10px
+         font-size: 50px
+      p 
+         color: rgb(51, 51, 51)
+         font-size: 27px
+         font-weight: 400
+         line-height: 37px
+         margin-bottom: 50px
+      a 
+         width: 259.26px
+         height: 55px
+         font-size: 16px
+         margin: 0 auto
+         .svg 
+            margin-left: 15px
+            path 
+               fill: white
+         &:hover 
+            .svg 
+               path 
+                  fill: $green
+.contacts 
+   &__wrap
+      padding-top: 70px
+      margin-top: 40px
+      border-top: 1px solid rgb(237, 237, 237)
+   &__row 
+      justify-content: space-between
+      margin-bottom: 60px
+   &__title 
+      color: rgb(149, 149, 149)
+      font-size: 17px
+      font-weight: 600
+      margin-bottom: 8px
+   &__item 
+      a 
+         color: rgb(51, 51, 51)
+         font-size: 27px
+         font-weight: 400
+         line-height: 27px
+         &:hover 
+            color: $green
+   &__text 
+      color: rgb(51, 51, 51)
+      font-size: 27px
+      line-height: 27px
+   #map 
+      width: 100%
+      height: 773px
+      margin-bottom: 40px
+   [class*="ymaps-"][class*="-ground-pane"] 
+      filter: grayscale(100)
+.call2 
+   padding-bottom: 100px
